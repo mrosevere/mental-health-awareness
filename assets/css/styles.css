@@ -1,15 +1,100 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Asterisk wildcard selector to override default styles added by the browser */
-* {
-    /* placeholder */
+
+/* Navbar */
+.navbar-brand img {
+  height: 40px;
+  width: auto;
 }
 
+/* Center the navbar title between the brand and the toggler */
+.navbar .container-fluid {
+  position: relative;
+}
 
+.navbar-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0; /* ensure no extra margins affect centering */
+  white-space: nowrap; /* prevent wrapping on small screens */
+  z-index: 1;
+}
+/* When navbar is collapsed (mobile / below lg), align the dropdown under the toggler */
+@media screen and (max-width: 991.98px) {
+  .navbar .container-fluid {
+    position: relative; /* ensure absolute children are positioned to this container */
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    right: 0; /* align to the right so it appears under the toggler */
+    left: auto;
+    width: auto; /* shrink to content instead of full width */
+    min-width: 180px;
+  }
+
+  .navbar-collapse .navbar-nav {
+    display: block;
+    text-align: right;
+  }
+
+  .navbar-collapse .nav-link {
+    white-space: nowrap;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
 body {
   font-family: 'Open Sans', sans-serif;
 }
 h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
+}
+
+
+/* --------Media Queries for different device size styles */
+  
+  /* ----- Extra Small Devices ----- */
+  @media screen and (max-width: 576px) {
+    /* Navbar Title Font Size */
+    .navbar-text {
+      font-size: 0.75rem; /* smaller for mobile */
+    }
+  }
+
+/* ----- Small devices ----- */
+@media screen and (min-width: 576px) {
+  /* Navbar Title Font Size */
+  .navbar-text {
+    font-size: 1rem;
+  }
+}
+
+
+/* ----- Medium devices ----- */
+@media screen and (min-width: 768px) {
+  /* Navbar Title Font Size */
+  .navbar-text {
+    font-size: 1.25rem;
+  }
+}
+
+
+/* ----- Large devices ----- */
+@media screen and (min-width: 992px) {
+  /* Navbar Title Font Size */
+  .navbar-text {
+    font-size: 1.5rem;
+  }
+}
+
+/* ----- XL devices ----- */
+@media screen and (min-width: 1200px) {
+  /* Navbar Title Font Size */
+  .navbar-text {
+    font-size: 2rem;
+  }
 }
