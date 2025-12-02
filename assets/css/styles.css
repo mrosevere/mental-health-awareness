@@ -67,12 +67,62 @@ h3 {
 }
 
 /* --------- Hero Section --------- */
-.hero {
+#hero-section {
+  position: relative; /* anchor for ::before */
   color: var(--color-dark);
-  background: url("../images/hero-image.png") no-repeat center center;
   background-size: cover;
+  padding: 1.5rem 2rem;
+  overflow: hidden; /* ensures ::before stays inside */
+}
+
+/* Overlay with background image */
+#hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/Map.jpg") no-repeat center center;
+  background-size: cover;
+  opacity: 0.75; /* soften image */
+  z-index: 1;
+}
+
+/* Hero Text container above overlay */
+.hero-content {
+  position: relative; /* creates stacking context */
+  z-index: 2; /* ensures text is above ::before */
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  color: var(--color-dark);
+}
+
+/* ------------------ explore-section ------------------ */
+#explore-section {
+  position: relative; /* anchor for ::before */
+  color: var(--color-dark);
   padding-top: 1rem;
   padding-bottom: 2rem;
+  overflow: hidden; /* keeps overlay contained */
+}
+
+/* Background image overlay */
+#explore-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/scenery-image.png") no-repeat center center;
+  background-size: cover;
+  opacity: 0.66; /* soften background */
+  z-index: 1;
+}
+
+/* Ensure all content sits above overlay */
+#explore-section .row,
+#explore-section h2,
+#explore-section .card {
+  position: relative;
+  z-index: 2;
 }
 
 /* -------- Media Queries for different device size styles -------- */

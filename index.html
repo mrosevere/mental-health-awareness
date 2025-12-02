@@ -81,22 +81,114 @@
                 >Home</a
               >
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#explore-section">Explore Topics</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
     <!-- Header Hero Section and CTA -->
-    <header id="hero" class="container-fluid text-center hero">
-      <h2>You Matter</h2>
-      <p class="lead">Find balance, build resilience, embrace wellbeing.</p>
-      <a href="#resources" class="btn btn-primary btn-lg">
-        Explore Resources
-      </a>
+    <header id="hero-section" class="container-fluid text-center">
+      <div class="hero-content">
+        <h2>You Matter</h2>
+        <p class="lead">Find balance, build resilience, embrace wellbeing.</p>
+        <a href="#resources" class="btn btn-primary btn-lg">
+          Explore Resources
+        </a>
+      </div>
     </header>
+
+    <!-- Explore Section -->
+    <section id="explore-section" class="explore-section container-fluid">
+      <div class="row justify-content-center">
+        <!-- Section title -->
+        <div class="col-12 text-center my-2">
+          <h2>Explore topics</h2>
+        </div>
+
+        <!-- Section Card 1 -->
+        <div
+          class="col-12 col-md-4 col-lg-3 d-flex justify-content-center mb-4"
+        >
+          <div class="card" style="width: 18rem">
+            <img src="..." class="card-img-top" alt="..." />
+            <!-- A photo realistic image representing stress in a neutral, inclusive way. Show a person seated at a desk with papers and a laptop, head resting in hands, conveying stress and overwhelm. The figure should be depicted in a gender-neutral, age-neutral, and ethnically neutral style, avoiding specific identifiers. The environment should be ambiguous enough to represent both a student taking an exam and a professional facing work stress. Lighting should be soft, with muted tones to reflect the emotional weight without being harsh or exaggerated. -->
+            <div class="card-body">
+              <h5 class="card-title">Stress Management</h5>
+              <p class="card-text">
+                Stress is a natural response, but it doesn't have to take
+                control. Learn simple techniques to recognize triggers, calm
+                your mind, and restore balance in everyday life.
+              </p>
+              <a href="#" class="btn btn-primary">Explore coping strategies</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Card 2 -->
+        <div
+          class="col-12 col-md-4 col-lg-3 d-flex justify-content-center mb-4"
+        >
+          <div class="card" style="width: 18rem">
+            <img src="..." class="card-img-top" alt="..." />
+            <!-- A photo realistic image representing stress in a neutral, inclusive way. Show a person seated at a desk with papers and a laptop, head resting in hands, conveying stress and overwhelm. The figure should be depicted in a gender-neutral, age-neutral, and ethnically neutral style, avoiding specific identifiers. The environment should be ambiguous enough to represent both a student taking an exam and a professional facing work stress. Lighting should be soft, with muted tones to reflect the emotional weight without being harsh or exaggerated. Use gentle tones inspired by the palette: Misty Blue (#5D92C6), Gentle Green (#AAC4AA), Soft Taupe (#F4F4F4), and Warm Yellow (#E2C081).-->
+            <div class="card-body">
+              <h5 class="card-title">Sleep Tips</h5>
+              <p class="card-text">
+                Good sleep is the foundation of mental wellbeing. Discover
+                simple habits to improve your sleep routine, from creating a
+                calming bedtime environment to managing stress before bed.
+                Restful nights help restore balance and energy for the day
+                ahead.
+              </p>
+              <a href="#" class="btn btn-primary">Learn healthy sleep habits</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Card 3 -->
+        <div
+          class="col-12 col-md-4 col-lg-3 d-flex justify-content-center mb-4"
+        >
+          <div class="card" style="width: 18rem">
+            <!-- Use gentle tones inspired by the palette: Misty Blue (#5D92C6), Gentle Green (#AAC4AA), Soft Taupe (#F4F4F4), and Warm Yellow (#E2C081). The overall mood should be peaceful, welcoming, and reassuring, suitable for a mental health awareness site. -->
+            <img src="..." class="card-img-top" alt="..." />
+            <!-- -->
+            <div class="card-body">
+              <h5 class="card-title">Mindfulness</h5>
+              <p class="card-text">
+                Mindfulness helps you stay present and calm, even when life
+                feels overwhelming. Explore simple practices like breathing
+                exercises and guided focus to reduce stress and improve clarity.
+                <a href="#" class="btn btn-primary"
+                  >Try mindfulness techniques</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Card 4 -->
+        <div class="col-12 col-md-4 d-flex justify-content-center mb-4">
+          <div class="card" style="width: 18rem">
+            <img src="..." class="card-img-top" alt="..." />
+            <!-- A photo realistic image representing healthy sleep habits in a neutral, inclusive way. Show a serene bedroom scene with soft lighting, a neatly made bed, and a calming atmosphere. Include subtle elements like a book on the nightstand, a glass of water, or a plant to suggest relaxation before sleep. Avoid showing a specific person to keep the image age, gender, and ethnicity neutral. Use gentle tones inspired by the palette: Misty Blue (#5D92C6), Gentle Green (#AAC4AA), Soft Taupe (#F4F4F4), and Warm Yellow (#E2C081). The overall mood should be peaceful, welcoming, and reassuring, suitable for a mental health awareness site. -->
+            <div class="card-body">
+              <h5 class="card-title">Seeking Help</h5>
+              <p class="card-text">
+                You don’t have to face challenges alone. Learn how to reach out
+                to trusted people, professionals, or support services when you
+                need guidance. Asking for help is a sign of strength, not
+                weakness.
+                <a href="#" class="btn btn-primary">Find support options</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Bootstrap JavaScript Script -->
     <script
@@ -104,5 +196,28 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
+    <script>
+      document
+        .querySelectorAll(".navbar-collapse .nav-link")
+        .forEach((link) => {
+          link.addEventListener("click", function (e) {
+            let section = document.querySelector(e.target.getAttribute("href"));
+            if (section) {
+              e.preventDefault(); // Prevent default anchor click behavior
+              let navbarHeight =
+                document.querySelector(".navbar-toggler").offsetHeight;
+              window.scroll({
+                top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                behavior: "smooth",
+              });
+              document
+                .querySelector(".navbar-collapse")
+                .classList.remove("show"); // Collapse navbar
+            }
+          });
+        });
+    </script>
   </body>
 </html>
