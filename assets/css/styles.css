@@ -25,16 +25,16 @@ h3 {
 /* --------- Navbar --------- */
 .navbar {
   background-color: var(--color-primary);
-  color: var(--color-light);
+  color: var(--color-dark);
 }
 
 .navbar-text,
 .navbar-brand {
-  color: var(--color-light);
+  color: var(--color-dark);
 }
 
 .navbar .nav-link.active {
-  color: var(--color-light);
+  color: var(--color-dark);
   font-weight: 600;
 }
 
