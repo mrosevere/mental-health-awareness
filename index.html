@@ -13,7 +13,27 @@
       content="mental health, wellbeing, stress, anxiety, mindfulness, sleep tips, support, resources, awareness, self-care, crisis help, UK helplines, mental health education"
     />
 
-    <title>Document</title>
+    <title>Mental Health Awareness</title>
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
 
     <!-- Bootstrap CSS link -->
     <link
@@ -30,14 +50,20 @@
   <!-- Body -->
   <body>
     <!-- Nav Bar  -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="assets/images/Logo-NoText.png" alt="Mental Health Awareness Logo"></a>
+        <a class="navbar-brand nav-icon-order" href="index.html"
+          ><img
+            src="assets/images/Logo-NoText.png"
+            alt="Mental Health Awareness Logo"
+        /></a>
 
-        <h1 class="navbar-text display-6 text-center mx-auto mb-0">Mental Health Awareness</h1>
+        <h1 class="navbar-text text-center mx-auto mb-0">
+          Mental Health Awareness
+        </h1>
         <button
-            id="navbar-toggler"
-          class="navbar-toggler"
+          id="navbar-toggler"
+          class="navbar-toggler nav-button-order"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -51,7 +77,9 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="#">Features</a>
@@ -60,6 +88,15 @@
         </div>
       </div>
     </nav>
+
+    <!-- Header Hero Section and CTA -->
+    <header id="hero" class="container-fluid text-center hero">
+      <h2>You Matter</h2>
+      <p class="lead">Find balance, build resilience, embrace wellbeing.</p>
+      <a href="#resources" class="btn btn-primary btn-lg">
+        Explore Resources
+      </a>
+    </header>
 
     <!-- Bootstrap JavaScript Script -->
     <script
