@@ -228,49 +228,40 @@
       </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="container-fluid mt-auto">
-      <div class="row row justify-content-center">
-        <div class="col-12">
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener"
-            class="social"
-            aria-label="Visit our Facebook page (opens in a new tab)"
-            >
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-          <a
-            href="https://www.twitter.com/"
-            target="_blank"
-            rel="noopener"
-            class="social"
-            aria-label="Visit our Twitter page (opens in a new tab)"
-            >
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
-          <a
-            href="https://www.youtube.com/"
-            target="_blank"
-            rel="noopener"
-            class="social"
-            aria-label="Visit our YouTube page (opens in a new tab)"
-            >
-          <i class="fa-brands fa-youtube"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener"
-            class="social"
-            aria-label="Visit our Instagram page (opens in a new tab)"
-            >
-            <i class="fa-brands fa-instagram"></i>
-        </a>
+    <!-- old single-row footer removed; new three-column footer follows -->
+      <!-- Footer Section (three-column layout) -->
+      <footer class="container-fluid site-footer mt-auto" role="contentinfo" aria-label="Footer">
+        <div class="row justify-content-center align-items-start">
+
+          <!-- Column 1: Social links -->
+          <div class="col-12 col-md-4 footer-col footer-col-social text-center text-md-start mb-3 mb-md-0">
+            <!-- Social links: each link has a descriptive aria-label and opens in a new tab -->
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="social" aria-label="Visit our Facebook page (opens in a new tab)">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.twitter.com/" target="_blank" rel="noopener" class="social" aria-label="Visit our X (Twitter) page (opens in a new tab)">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="social" aria-label="Visit our YouTube page (opens in a new tab)">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="social" aria-label="Visit our Instagram page (opens in a new tab)">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <!-- Column 2: Attribution / links -->
+          <div class="col-12 col-md-4 footer-col footer-col-attr text-center mb-3 mb-md-0">
+            <p class="mb-0">Built with: <a href="https://getbootstrap.com/" target="_blank" aria-label="Link to Bootstrap website (opens in a new tab)" class="footer-link">Bootstrap</a></p>
+          </div>
+
+          <!-- Column 3: Copyright -->
+          <div class="col-12 col-md-4 footer-col footer-col-copy text-center text-md-end">
+            <p class="mb-0">&copy; 2025 Mental Health Awareness</p>
+          </div>
+
         </div>
-      </div>
-    </footer>
+      </footer>
 
     <!-- Bootstrap JavaScript Script -->
     <script
@@ -279,7 +270,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
+    <!-- Code Institute JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
     <script>
       document
         .querySelectorAll(".navbar-collapse .nav-link")

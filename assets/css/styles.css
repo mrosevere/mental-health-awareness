@@ -49,11 +49,10 @@ h3 {
 /* Center the navbar title between the brand and the toggler
    Make the container a flex row so `order` on its children works */
 .navbar .container-fluid {
+  /* keep position context for any absolute children, but do not
+     force a custom flex layout here — Bootstrap utilities and the
+     DOM order will control layout and collapse behavior. */
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
 }
 
 /* Centralize the NavBar Title using flex so it stays centered when menu opens */
@@ -125,49 +124,98 @@ h3 {
   z-index: 2;
 }
 
+
+/* --------- Footer (three-column) --------- */
+/*
+  Footer structure:
+  - .site-footer: outer wrapper (background + padding)
+  - .footer-col-social: social icons column
+  - .footer-col-attr: attribution/links column
+  - .footer-col-copy: copyright column
+
+  Styles below ensure social icon links have no underlines,
+  are spaced consistently, and remain accessible (focus styles).
+*/
+.site-footer {
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+  padding: 1rem 1.25rem;
+}
+
+/* Social icons: remove underlines and space icons consistently */
+.site-footer .footer-col-social .social,
+.site-footer .social {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 0.5rem;
+  color: inherit;
+  vertical-align: middle;
+}
+
+.site-footer .footer-col-social .social i {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* Stronger enforcement: ensure social links do not show default link color/underline
+   If a browser or other stylesheet is still applying link styles, these rules force
+   the desired appearance for social icons within the footer. */
+.site-footer .social {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.site-footer .social i { color: inherit; }
+
+/* Attribution / copyright columns */
+.site-footer .footer-col-attr,
+.site-footer .footer-col-copy {
+  color: var(--color-dark);
+}
+
+/* Footer link appearance (attribution links) */
+.site-footer .footer-link {
+  color: var(--color-dark);
+  text-decoration: underline;
+}
+
+/* Accessibility: visible focus outline for keyboard users */
+.site-footer .social:focus {
+  outline: 3px solid rgba(0,0,0,0.12);
+  outline-offset: 3px;
+}
+
+/* Responsive alignment: stack-centre on xs, left/center/right on md+ */
+@media (max-width: 575.98px) {
+  .site-footer .footer-col-social,
+  .site-footer .footer-col-attr,
+  .site-footer .footer-col-copy {
+    text-align: center;
+  }
+}
+
+@media (min-width: 576px) {
+  .site-footer .footer-col-social { text-align: left; }
+  .site-footer .footer-col-attr   { text-align: center; }
+  .site-footer .footer-col-copy   { text-align: right; }
+}
+
+
 /* -------- Media Queries for different device size styles -------- */
 
 /* ----- Extra Small Devices ----- */
 @media screen and (max-width: 576px) {
-  /* Navbar Title Font Size */
+  /* Navbar Title Font Size for extra small devices */
   .navbar-text {
-    font-size: 0.75rem; /* smaller for mobile */
-  }
-
-  /* default (mobile): toggler left (order 1), title center (2), collapse (3), brand right (4) */
-  .navbar-toggler {
-    order: 1;
-  }
-  .navbar-text {
-    order: 2;
-  }
-  .navbar-collapse {
-    order: 3;
-  }
-  .navbar-brand {
-    order: 4;
+    font-size: 0.75rem;
   }
 }
 
 /* ----- Small devices ----- */
 @media screen and (min-width: 576px) {
-  /* Navbar Title Font Size */
+  /* Navbar Title Font Size for small devices and up */
   .navbar-text {
     font-size: 1rem;
-  }
-
-  /* default (mobile): toggler left (order 1), title center (2), collapse (3), brand right (4) */
-  .navbar-toggler {
-    order: 1;
-  }
-  .navbar-text {
-    order: 2;
-  }
-  .navbar-collapse {
-    order: 3;
-  }
-  .navbar-brand {
-    order: 4;
   }
 }
 
@@ -181,22 +229,35 @@ h3 {
 
 /* ----- Large devices ----- */
 @media screen and (min-width: 992px) {
-  /* Navbar Title Font Size */
+  /* Navbar Title Font Size for large devices */
   .navbar-text {
     font-size: 1.5rem;
   }
-  /* On large screens set visual order: brand (left), title (center), collapse (right), toggler last */
-  .navbar-brand.nav-icon-order {
-    order: 1;
-  }
+}
+
+/* Center the navbar title absolutely on large screens so it remains
+   visually centered in the viewport regardless of how wide the
+   right-side navigation is. Keep this behavior only at large
+   breakpoints to avoid interfering with the mobile collapse layout. */
+@media screen and (min-width: 992px) {
   .navbar-text {
-    order: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    white-space: nowrap;
+    z-index: 2;
+    pointer-events: none; /* avoid blocking clicks on nearby controls */
   }
-  .navbar-collapse {
-    order: 3;
-  }
-  .navbar-toggler.nav-button-order {
-    order: 4;
+
+  /* Ensure brand, toggler and nav links remain interactive above the title */
+  .navbar .navbar-brand,
+  .navbar .navbar-toggler,
+  .navbar .navbar-nav {
+    position: relative;
+    z-index: 3;
+    pointer-events: auto;
   }
 }
 
