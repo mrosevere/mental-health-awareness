@@ -13,6 +13,14 @@
   color: var(--color-light);
 }
 
+/* Button design system (uses palette variables from :root) */
+.quick-links .btn-dark {
+  background-color: #364954 ;
+  color: var(--color-light);
+width: 100px;
+}
+
+
 
 html {
   scroll-padding-top: 60px; /* adjust navbar height */
@@ -115,7 +123,6 @@ h3 {
   border-radius: 8px;
   padding: 1.5rem;
 }
-
 
 /* ------------------ explore-section ------------------ */
 #explore-section {
