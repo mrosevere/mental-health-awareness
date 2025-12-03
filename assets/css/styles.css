@@ -165,6 +165,14 @@ main {
   color: var(--color-dark);
 }
 
+#hero-section h2 {
+  font-weight: 600;
+}
+
+#hero-section .lead {
+  font-weight: 600;
+}
+
 /* ---------------- quick-links-section ---------------- */
 .quick-links-section {
   background-color: #dfcec4; /* color taken from the Explore background image using Eye dropper */
