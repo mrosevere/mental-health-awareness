@@ -7,6 +7,13 @@
   --color-danger: #d6898a; /* Soft Coral */
 }
 
+/* Button design system (uses palette variables from :root) */
+.btn-dark {
+  background-color: #364954 ;
+  color: var(--color-light);
+}
+
+
 html {
   scroll-padding-top: 60px; /* adjust navbar height */
 }
