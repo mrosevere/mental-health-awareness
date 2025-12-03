@@ -1,3 +1,6 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
   --color-primary: #86acc1; /* Calming Blue */
   --color-secondary: #aac4aa; /* Gentle Green */
@@ -5,64 +8,14 @@
   --color-dark: #2a2a2a; /* Dark Charcoal */
   --color-warning: #e2c081; /* Warm Yellow */
   --color-danger: #d6898a; /* Soft Coral */
-  --color-button: #364954;  /* Deeper Blue */
+  --color-button: #364954; /* Deeper Blue */
   --nav-height: 66px; /* Navbar height for offset */
 }
 
 /* Global Styles */
 body {
-  font-family: "Open Sans", sans-serif; 
+  font-family: "Open Sans", sans-serif;
 }
-
-
-main {
-  /* Ensure headings are offset when targeted so the navbar doesn't cover them */
-  scroll-padding-top: 66px; 
-}
-
-/* Button design system (uses palette variables from :root) */
-.btn-dark {
-  background-color: var(--color-button);
-  color: var(--color-light);
-}
-
-.btn-dark:hover {
-text-shadow: 0 0 10px var(--color-warning);
-background-color: black;
-}
-
-/* Button design system (uses palette variables from :root) */
-.btn-danger {
-  background-color: var(--color-danger) ;
-  color: var(--color-dark);
-  font-weight: 700;
-  border-width: 5px;
-}
-
-.btn-danger:hover {
-    color: var(--color-warning);
-    text-shadow: 0 0 5px var(--color-warning);
-}
-
-
-/* Button design system (uses palette variables from :root) */
-.quick-links .btn-dark {
-  background-color: var(--color-button) ; 
-  color: var(--color-light);
-width: 100px;
-}
-
-/* Button design system (uses palette variables from :root) */
-.quick-links .btn-dark:hover {
-  background-color: black; 
-  color: var(--color-light);
-width: 100px;
-}
-
-
-/* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
 
 h1,
 h2,
@@ -70,7 +23,69 @@ h3 {
   font-family: "Poppins", sans-serif;
 }
 
-/* --------- Navbar --------- */
+main {
+  /* Ensure headings are offset when targeted so the navbar doesn't cover them */
+  scroll-padding-top: 66px;
+}
+
+/* ---------------- Buttons  ---------------- */
+/* Button design system (uses palette variables from :root) */
+.btn-dark {
+  background-color: var(--color-button);
+  color: var(--color-light);
+}
+
+.btn-dark:hover {
+  text-shadow: 0 0 10px var(--color-warning);
+  background-color: black;
+}
+
+/* Button design system (uses palette variables from :root) */
+.btn-danger {
+  background-color: var(--color-danger);
+  color: var(--color-dark);
+  font-weight: 700;
+  border-width: 5px;
+}
+
+.btn-danger:hover {
+  color: var(--color-warning);
+  text-shadow: 0 0 5px var(--color-warning);
+}
+
+/* Button design system (uses palette variables from :root) */
+.quick-links .btn-dark {
+  background-color: var(--color-button);
+  color: var(--color-light);
+  width: 100px;
+}
+
+/* Button design system (uses palette variables from :root) */
+.quick-links .btn-dark:hover {
+  background-color: black;
+  color: var(--color-light);
+  width: 100px;
+}
+
+
+/* ---------------- Cards ---------------- */
+.card {
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column; /* stack title, text, and button */
+  flex: 1; /* allow card-body to grow and fill space */
+}
+
+.card-body .btn {
+  margin-top: auto; /* push button to bottom */
+}
+
+
+/* ---------------- Navbar ---------------- */
 .navbar {
   background-color: var(--color-primary);
   color: var(--color-dark);
@@ -88,8 +103,8 @@ h3 {
 } */
 
 .nav-link:hover {
-    color: var(--color-warning);
-    text-shadow: 0 0 5px var(--color-warning);
+  color: var(--color-warning);
+  text-shadow: 0 0 5px var(--color-warning);
 }
 
 .navbar-brand img {
@@ -119,7 +134,7 @@ h3 {
   text-align: center; /* centre text within the flex item */
 }
 
-/* --------- Hero Section --------- */
+/* ---------------- Hero Section ---------------- */
 #hero-section {
   position: relative; /* anchor for ::before */
   color: var(--color-dark);
@@ -150,16 +165,15 @@ h3 {
   color: var(--color-dark);
 }
 
-/* ------------------ quick-links-section ------------------ */
+/* ---------------- quick-links-section ---------------- */
 .quick-links-section {
   background-color: #dfcec4; /* color taken from the Explore background image using Eye dropper */
-  border-radius: 8px;
   padding: 1.5rem;
   border: solid;
   border-color: #a5aead; /* color taken from the Explore background image using Eye dropper */
 }
 
-/* ------------------ explore-section ------------------ */
+/* ---------------- explore-section ---------------- */
 #explore-section {
   position: relative; /* anchor for ::before */
   color: var(--color-dark);
@@ -187,8 +201,7 @@ h3 {
   z-index: 2;
 }
 
-
-/* --------- Footer (three-column) --------- */
+/* ---------------- Footer ---------------- */
 /*
   Footer structure:
   - .site-footer: outer wrapper (background + padding)
@@ -228,7 +241,9 @@ h3 {
   text-decoration: none !important;
 }
 
-.site-footer .social i { color: inherit; }
+.site-footer .social i {
+  color: inherit;
+}
 
 /* Attribution / copyright columns */
 .site-footer .footer-col-attr,
@@ -244,12 +259,26 @@ h3 {
 
 /* Accessibility: visible focus outline for keyboard users */
 .site-footer .social:focus {
-  outline: 3px solid rgba(0,0,0,0.12);
+  outline: 3px solid rgba(0, 0, 0, 0.12);
   outline-offset: 3px;
 }
 
 /* Responsive alignment: stack-centre on xs, left/center/right on md+ */
 @media (max-width: 575.98px) {
+}
+
+@media (min-width: 576px) {
+}
+
+/* -------- Media Queries for different device size styles -------- */
+
+/* ---------------- Extra Small Devices ---------------- */
+@media screen and (max-width: 575.98px) {
+  /* Navbar Title Font Size for extra small devices */
+  .navbar-text {
+    font-size: 0.75rem;
+  }
+
   .site-footer .footer-col-social,
   .site-footer .footer-col-attr,
   .site-footer .footer-col-copy {
@@ -257,32 +286,25 @@ h3 {
   }
 }
 
-@media (min-width: 576px) {
-  .site-footer .footer-col-social { text-align: left; }
-  .site-footer .footer-col-attr   { text-align: center; }
-  .site-footer .footer-col-copy   { text-align: right; }
-}
-
-
-/* -------- Media Queries for different device size styles -------- */
-
-/* ----- Extra Small Devices ----- */
-@media screen and (max-width: 576px) {
-  /* Navbar Title Font Size for extra small devices */
-  .navbar-text {
-    font-size: 0.75rem;
-  }
-}
-
-/* ----- Small devices ----- */
+/* ---------------- Small devices ---------------- */
 @media screen and (min-width: 576px) {
   /* Navbar Title Font Size for small devices and up */
   .navbar-text {
     font-size: 1rem;
   }
+
+  .site-footer .footer-col-social {
+    text-align: left;
+  }
+  .site-footer .footer-col-attr {
+    text-align: center;
+  }
+  .site-footer .footer-col-copy {
+    text-align: right;
+  }
 }
 
-/* ----- Medium devices ----- */
+/* ---------------- Medium devices ---------------- */
 @media screen and (min-width: 768px) {
   /* Navbar Title Font Size */
   .navbar-text {
@@ -290,7 +312,7 @@ h3 {
   }
 }
 
-/* ----- Large devices ----- */
+/* ---------------- Large devices ---------------- */
 @media screen and (min-width: 992px) {
   /* Navbar Title Font Size for large devices */
   .navbar-text {
@@ -324,7 +346,7 @@ h3 {
   }
 }
 
-/* ----- XL devices ----- */
+/* ---------------- XL devices ---------------- */
 @media screen and (min-width: 1200px) {
   /* Navbar Title Font Size */
   .navbar-text {
