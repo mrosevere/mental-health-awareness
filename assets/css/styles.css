@@ -33,9 +33,15 @@ h3 {
   color: var(--color-dark);
 }
 
-.navbar .nav-link.active {
+/* Commented out as it is a single page site at the moment */
+/* .navbar .nav-link.active {
   color: var(--color-dark);
   font-weight: 600;
+} */
+
+.nav-link:hover {
+    color: var(--color-warning);
+    text-shadow: 0 0 5px var(--color-warning);
 }
 
 .navbar-brand img {
@@ -95,6 +101,14 @@ h3 {
   text-align: center;
   color: var(--color-dark);
 }
+
+/* ------------------ quick-links-section ------------------ */
+.quick-links-section {
+  background-color: var(--color-warning);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
 
 /* ------------------ explore-section ------------------ */
 #explore-section {
