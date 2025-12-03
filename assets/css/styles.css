@@ -5,17 +5,44 @@
   --color-dark: #2a2a2a; /* Dark Charcoal */
   --color-warning: #e2c081; /* Warm Yellow */
   --color-danger: #d6898a; /* Soft Coral */
+  --color-button: #364954;  /* Deeper Blue */
 }
 
 /* Button design system (uses palette variables from :root) */
 .btn-dark {
-  background-color: #364954 ;
+  background-color: var(--color-button);
   color: var(--color-light);
 }
 
+.btn-dark:hover {
+text-shadow: 0 0 10px var(--color-warning);
+background-color: black;
+}
+
+/* Button design system (uses palette variables from :root) */
+.btn-danger {
+  background-color: var(--color-danger) ;
+  color: var(--color-dark);
+  font-weight: 700;
+  border-width: 5px;
+}
+
+.btn-danger:hover {
+    color: var(--color-warning);
+    text-shadow: 0 0 5px var(--color-warning);
+}
+
+
 /* Button design system (uses palette variables from :root) */
 .quick-links .btn-dark {
-  background-color: #364954 ;
+  background-color: var(--color-button) ; 
+  color: var(--color-light);
+width: 100px;
+}
+
+/* Button design system (uses palette variables from :root) */
+.quick-links .btn-dark:hover {
+  background-color: black; 
   color: var(--color-light);
 width: 100px;
 }
