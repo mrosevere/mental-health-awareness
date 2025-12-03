@@ -173,33 +173,35 @@ main {
   border-color: #a5aead; /* color taken from the Explore background image using Eye dropper */
 }
 
-/* ---------------- explore-section ---------------- */
-#explore-section {
-  position: relative; /* anchor for ::before */
-  color: var(--color-dark);
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  overflow: hidden; /* keeps overlay contained */
+/* #quick-links {
+  position: relative;
+  z-index: 2;
+} */
+
+
+/* ---------------- Common Background ---------------- */
+
+#background-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
-/* Background image overlay */
-#explore-section::before {
+#background-wrapper::before {
   content: "";
   position: absolute;
   inset: 0;
   background: url("../images/scenery-image.png") no-repeat center center;
   background-size: cover;
-  opacity: 0.66; /* soften background */
-  z-index: 1;
+  opacity: 0.66;
+  z-index: -1; /* push behind all content */
 }
 
-/* Ensure all content sits above overlay */
-#explore-section .row,
-#explore-section h2,
-#explore-section .card {
+#explore-section,
+#faq {
   position: relative;
   z-index: 2;
 }
+
 
 /* ---------------- Footer ---------------- */
 /*
