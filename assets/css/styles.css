@@ -95,6 +95,25 @@ h3 {
   margin-top: auto; /* push button to bottom */
 }
 
+.card img {
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--color-primary);
+  transition: border-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.card:hover img {
+  opacity: 1; /* Slightly dims the image on hover, drawing attention to the text. */
+}
+
+
+
+
 
 /* ---------------- Navbar ---------------- */
 .navbar {
