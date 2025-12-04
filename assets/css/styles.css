@@ -343,7 +343,7 @@ h3 {
 @media screen and (min-width: 992px) {
   /* Navbar Title Font Size for large devices */
   .navbar-text {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -363,20 +363,32 @@ h3 {
     pointer-events: none; /* avoid blocking clicks on nearby controls */
   }
 
+  @media screen and (max-width: 1399px) and (min-width: 992px) {
+  .navbar-text {
+  padding-right: 300px; /* depending on your layout */
+  }
+
+    .navbar-nav .nav-link {
+    font-size: 1.0rem;   /* smaller text */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+
   /* Ensure brand, toggler and nav links remain interactive above the title */
   .navbar .navbar-brand,
   .navbar .navbar-toggler,
   .navbar .navbar-nav {
     position: relative;
     z-index: 3;
-    pointer-events: auto;
   }
 }
 
-/* ---------------- XL devices ---------------- */
-@media screen and (min-width: 1200px) {
+/* ---------------- XXL devices ---------------- */
+@media screen and (min-width: 1400px) {
   /* Navbar Title Font Size */
   .navbar-text {
     font-size: 2rem;
+    padding-right: 40px; /* depending on your layout */
   }
 }
