@@ -24,7 +24,6 @@ html {
   scroll-margin-top: 0;
 }
 
-
 body {
   font-family: "Open Sans", sans-serif;
   /* Ensure headings are offset when targeted so the navbar doesn't cover them */
@@ -36,8 +35,6 @@ h2,
 h3 {
   font-family: "Poppins", sans-serif;
 }
-
-
 
 /* ---------------- Buttons  ---------------- */
 /* Button design system (uses palette variables from :root) */
@@ -78,7 +75,6 @@ h3 {
   width: 100px;
 }
 
-
 /* ---------------- Cards ---------------- */
 .card {
   display: flex;
@@ -102,15 +98,10 @@ h3 {
 .card:hover {
   border-color: var(--color-primary);
   transition: border-color 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
   transition: all 0.3s ease;
 }
-
-
-
-
-
 
 /* ---------------- Navbar ---------------- */
 .navbar {
@@ -208,7 +199,6 @@ h3 {
   border-color: #a5aead; /* color taken from the Explore background image using Eye dropper */
 }
 
-
 /* ---------------- Common Background ---------------- */
 
 #background-wrapper {
@@ -231,7 +221,6 @@ h3 {
   position: relative;
   z-index: 2;
 }
-
 
 /* ---------------- Footer ---------------- */
 /*
