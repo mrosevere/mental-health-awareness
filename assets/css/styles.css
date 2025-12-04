@@ -13,8 +13,22 @@
 }
 
 /* Global Styles */
+
+/* Push the sections down by the height of the navbar */
+html {
+  scroll-padding-top: var(--nav-height);
+}
+
+/* Stop the ID sections from getting pushed down too far when using navbar links*/
+[id] {
+  scroll-margin-top: 0;
+}
+
+
 body {
   font-family: "Open Sans", sans-serif;
+  /* Ensure headings are offset when targeted so the navbar doesn't cover them */
+  scroll-padding-top: 66px;
 }
 
 h1,
@@ -23,10 +37,7 @@ h3 {
   font-family: "Poppins", sans-serif;
 }
 
-main {
-  /* Ensure headings are offset when targeted so the navbar doesn't cover them */
-  scroll-padding-top: 66px;
-}
+
 
 /* ---------------- Buttons  ---------------- */
 /* Button design system (uses palette variables from :root) */

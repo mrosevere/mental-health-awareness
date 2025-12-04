@@ -115,7 +115,7 @@
     <main>
       <section id="background-wrapper" class="position-relative">
         <!-- Quick Links -->
-        <section id="quick-links" class="quick-links-section container-fluid">
+        <section id="quick-links"class="quick-links-section container-fluid">
           <div class="row justify-content-center">
             <!-- Section title -->
             <div class="col-12 text-center">
@@ -161,7 +161,7 @@
                     ></button>
                   </div>
 
-                  <!-- Body -->
+                  <!-- Modal Body -->
                   <div class="modal-body">
                     <p>
                       If you or someone else is in danger, call
@@ -207,7 +207,7 @@
                     </p>
                   </div>
 
-                  <!-- Footer -->
+                  <!-- Modal Footer -->
                   <div class="modal-footer">
                     <button
                       type="button"
@@ -467,7 +467,7 @@
                   >
                     <div class="accordion-body">
                       Start by listening without judgment and letting them know
-                      you care. Encourage them to talk about how they’re
+                      you care. Encourage them to talk about how they're
                       feeling, and avoid trying to “fix” things quickly. Offer
                       practical help, like going with them to an appointment or
                       sharing trusted resources. Remind them that seeking
@@ -487,7 +487,7 @@
                       aria-expanded="false"
                       aria-controls="faqCollapseThree"
                     >
-                      What should I do if I’m worried about my own mental
+                      What should I do if I'm worried about my own mental
                       health?
                     </button>
                   </h2>
@@ -498,7 +498,7 @@
                     data-bs-parent="#faqAccordion"
                   >
                     <div class="accordion-body">
-                      If you’re concerned about your mental health, start by
+                      If you're concerned about your mental health, start by
                       acknowledging how you feel and giving yourself permission
                       to seek help. Talk to someone you trust, such as a friend,
                       family member, or your GP. Explore small steps that
@@ -521,7 +521,7 @@
                       aria-expanded="false"
                       aria-controls="faqCollapseFour"
                     >
-                      Where can I find help if I’m struggling?
+                      Where can I find help if I'm struggling?
                     </button>
                   </h2>
                   <div
@@ -631,28 +631,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Code Institute JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
-    <script>
-      document
-        .querySelectorAll(".navbar-collapse .nav-link")
-        .forEach((link) => {
-          link.addEventListener("click", function (e) {
-            let section = document.querySelector(e.target.getAttribute("href"));
-            if (section) {
-              e.preventDefault(); // Prevent default anchor click behavior
-              let navbarHeight =
-                document.querySelector(".navbar-toggler").offsetHeight;
-              window.scroll({
-                top: section.offsetTop - navbarHeight, // Adjust for navbar height
-                behavior: "smooth",
-              });
-              document
-                .querySelector(".navbar-collapse")
-                .classList.remove("show"); // Collapse navbar
-            }
-          });
-        });
-    </script>
+
 
     <!-- Font Awsome -->
     <script
