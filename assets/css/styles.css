@@ -107,9 +107,6 @@ h3 {
   transition: all 0.3s ease;
 }
 
-.card:hover img {
-  opacity: 1; /* Slightly dims the image on hover, drawing attention to the text. */
-}
 
 
 
