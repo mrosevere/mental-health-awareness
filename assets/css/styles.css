@@ -250,6 +250,12 @@ main {
   color: inherit;
 }
 
+/* Deliberately did not add hover to the Footer Bootstrap attribution as this detracted from the main CTA. */
+.social:hover i {
+  color: var(--color-warning);
+  text-shadow: 0 0 5px var(--color-warning);
+}
+
 /* Attribution / copyright columns */
 .site-footer .footer-col-attr,
 .site-footer .footer-col-copy {
