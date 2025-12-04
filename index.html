@@ -108,7 +108,7 @@
       <div class="hero-content">
         <h2>You Matter</h2>
         <p class="lead">Find balance, build resilience, embrace wellbeing.</p>
-        <a href="#resources" class="btn btn-dark btn-lg"> Explore Topics </a>
+        <a href="#explore-section" class="btn btn-dark btn-lg"> Explore Topics </a>
       </div>
     </header>
 
@@ -631,6 +631,17 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- script to close burger navbar on link click -->
+<script>
+  document.querySelectorAll(".navbar-collapse .nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      const navbarCollapse = document.querySelector(".navbar-collapse");
+      if (navbarCollapse.classList.contains("show")) {
+        navbarCollapse.classList.remove("show");
+      }
+    });
+  });
+</script>
 
 
     <!-- Font Awsome -->
